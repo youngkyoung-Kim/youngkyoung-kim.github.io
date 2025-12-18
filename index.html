@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김영경 | M.S. Student</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+            <div class="avatar">
+                <!-- 같은 폴더 안에 profile.jpg 넣어두기 -->
+                <img src="profile.jpg" alt="Profile Image" />
+            </div>
+
+            <h1 class="name">김영경</h1>
+            <p class="role">M.S. Student</p>
+            <p class="univ">OO University</p>
+
+            <div class="tagline">Ferroelectric & Oxide Semiconductor Devices</div>
+
+            <nav class="links">
+                <!-- 한 페이지 내 섹션으로 스크롤 이동 -->
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#pubs">Publications</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="sidebar-meta">
+                <p>서울 · Device Physics · Neuromorphic</p>
+            </div>
+        </aside>
+
+        <!-- 메인 콘텐츠 -->
+        <main class="content content-offset">
+            <!-- 인트로 카드 -->
+            <section class="intro-card">
+                <h2>Welcome 👋</h2>
+                <p>
+                    강유전체 기반 FeFET과 산화물 반도체 채널 소자를 이용한
+                    <strong>비휘발성 메모리 및 뉴로모픽 디바이스</strong>를 연구하고 있습니다.
+                    공정부터 전기적 특성 분석, 펄스 측정까지 직접 수행하며
+                    소자 물리와 회로 응용 사이의 연결고리를 고민하고 있습니다.
+                </p>
+
+                <div class="chips">
+                    <span>HfO₂ / HZO FeFET</span>
+                    <span>MFS / MIFS 구조</span>
+                    <span>IGZO · ITZO TFT</span>
+                    <span>Retention / Endurance</span>
+                    <span>Neuromorphic</span>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="card">
+                <h2>About</h2>
+                <p>
+                    한양대학교 나노광전자학과 석사 과정생으로, HfO₂ 기반 FeFET 및 산화물 반도체 채널
+                    소자를 연구하고 있습니다. 특히 MFS/MIFS 구조 설계, 게이트 일함수와
+                    인터페이스 엔지니어링을 통해 메모리 윈도우(MW)를 향상시키고,
+                    <strong>retention</strong>과 <strong>endurance</strong>를 동시에 확보하는 것을 목표로 하고 있습니다.
+                </p>
+
+                <div class="info-grid">
+                    <div>
+                        <h3>Education</h3>
+                        <ul>
+                            <li>M.S. in Nanophotonics Engineering, Hanyang University (2024– )</li>
+                            <li>B.S. in Nanophotonics Engineering, Hanyang University (2024)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Keywords</h3>
+                        <ul>
+                            <li>FeFET / FeRAM / eNVM</li>
+                            <li>Oxide Semiconductor TFTs</li>
+                            <li>Pulse-based Characterization</li>
+                            <li>Device Reliability Physics</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research -->
+        <section id="research">
+            <h2>Research Interests</h2>
+        
+            <!-- FeFET -->
+            <article class="research-item">
+                <h3>Ferroelectric Field-Effect Transistors (FeFETs)</h3>
+        
+                <p>
+                    HfO₂ 기반 강유전체를 게이트 절연층으로 적용한 FeFET 소자를 연구하고 있으며,
+                    MFS/MIFS 구조 설계를 통해 메모리 윈도우(Memory Window),
+                    PGM/ERS 효율, retention 및 endurance 특성을 향상시키는 데
+                    초점을 두고 있습니다.
+                </p>
+        
+                <figure class="research-figure">
+                    <img src="polarization_concept.png" alt="Ferroelectric polarization concept" />
+                    <figcaption>
+                        Polarization behavior of ferroelectric materials under applied electric field.
+                    </figcaption>
+                </figure>
+        
+                <ul>
+                    <li>HZO ferroelectric phase stabilization</li>
+                    <li>Work-function engineering of gate electrodes</li>
+                    <li>Memory window and reliability analysis</li>
+                </ul>
+            </article>
+        
+            <!-- Oxide TFT -->
+            <article class="research-item">
+                <h3>Oxide Semiconductor TFTs</h3>
+        
+                <p>
+                    a-IGZO 및 a-ITZO 기반 산화물 반도체 TFT를 제작하고,
+                    채널 조성, 산소 공공 및 계면 트랩이 소자 성능과
+                    신뢰성에 미치는 영향을 분석하고 있습니다.
+                </p>
+        
+                <figure class="research-figure">
+                    <img src="oxide_tft_concept.jpeg" alt="Oxide TFT structure and fabrication concept" />
+                    <figcaption>
+                        Schematic illustrations of oxide semiconductor TFT structures and
+                        fabrication processes.
+                    </figcaption>
+                </figure>
+        
+                <ul>
+                    <li>a-IGZO / a-ITZO hetero-channel engineering</li>
+                    <li>Carrier transport and defect state analysis</li>
+                    <li>Mobility, SS, and contact resistance</li>
+                </ul>
+            </article>
+        
+            <!-- Neuromorphic -->
+            <article class="research-item">
+                <h3>Neuromorphic & In-Memory Computing Devices</h3>
+        
+                <p>
+                    FeFET 및 charge-trap TFT 기반 소자를 시냅스 소자로 활용하여,
+                    뉴로모픽 컴퓨팅 시
+
+
+            <!-- Contact -->
+            <section id="contact" class="card contact-card">
+                <h2>Contact</h2>
+
+                <div class="contact-row">
+                    <div>
+                        <h3>Email</h3>
+                        <p>
+                            <a href="mailto:yjyk1103@hanyang.ac.kr">yjyk1103@hanyang.ac.kr</a>
+                        </p>
+
+                        <h3>Links</h3>
+                        <p>
+                            GitHub:
+                            <a href="https://github.com/yourid" target="_blank">
+                                github.com/yourid
+                            </a>
+                            <br />
+                            Google Scholar:
+                            <a href="#" target="_blank">
+                                (링크 추가 예정)
+                            </a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>CV</h3>
+                        <p>
+                            <a href="cv.pdf" target="_blank" class="cv-button">
+                                Download CV (PDF)
+                            </a>
+                        </p>
+
+                        <h3>Research Topics</h3>
+                        <p class="contact-tags">
+                            FeFET · Oxide TFT · HfO₂ Ferroelectrics ·
+                            Reliability · Neuromorphic
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                © 2025 Youngkyoung Kim
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

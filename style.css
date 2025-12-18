@@ -1,0 +1,414 @@
+/* 전체 기본 설정 */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+    color: #e5e7eb;
+}
+
+/* 페이지 레이아웃 */
+.page {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* ----------------- 사이드바 ----------------- */
+.sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.96);
+    border-right: 1px solid #111827;
+    padding: 32px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 아바타(프로필 사진) */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 3px solid rgba(148, 163, 184, 0.4);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 이름 / 소속 */
+.name {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.role {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+    color: #9ca3af;
+}
+
+.univ {
+    margin: 2px 0 10px;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+/* 짧은 한 줄 태그라인 */
+.tagline {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: #cbd5f5;
+    text-align: center;
+    background: rgba(59, 130, 246, 0.12);
+    border-radius: 999px;
+    padding: 6px 10px;
+}
+
+/* 링크들 */
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.links a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    transition: background 0.16s ease, transform 0.1s ease, color 0.16s ease;
+}
+
+.links a:hover {
+    background: rgba(56, 189, 248, 0.16);
+    color: #38bdf8;
+    transform: translateX(2px);
+}
+
+.sidebar-meta {
+    margin-top: auto;
+    font-size: 0.78rem;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* ----------------- 메인 콘텐츠 ----------------- */
+.content {
+    background: rgba(15, 23, 42, 0.92);
+    padding: 40px 40px 32px;
+    border-radius: 24px 0 0 24px;
+    border: 1px solid #111827;
+    border-left: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 페이지 열었을 때 조금 아래에서 시작하도록 오프셋 */
+.content-offset {
+    padding-top: 220px;
+    /* 더 많이 내리고 싶으면 숫자 키우면 됨 */
+}
+
+/* 섹션 기본 스타일 */
+.content section {
+    margin-bottom: 32px;
+}
+
+/* 카드 공통 스타일 */
+.intro-card,
+.card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), #020617);
+    border-radius: 20px;
+    border: 1px solid #1f2937;
+    padding: 22px 24px 20px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+}
+
+/* 섹션 제목 */
+.intro-card h2,
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+}
+
+/* 인트로 카드 내용 */
+.intro-card p {
+    margin: 0 0 12px;
+}
+
+/* 키워드 칩 */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chips span {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    color: #cbd5f5;
+    background: rgba(15, 23, 42, 0.9);
+}
+
+/* About 섹션의 2컬럼 레이아웃 */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.info-grid h3 {
+    margin: 0 0 6px;
+    font-size: 0.95rem;
+}
+
+.info-grid ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.9rem;
+}
+
+/* Research 카드 그리드 */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.research-item {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 16px;
+    border: 1px solid #1f2937;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+}
+
+.research-item h3 {
+    margin: 0 0 6px;
+    font-size: 0.98rem;
+}
+
+.research-item ul {
+    margin: 6px 0 0;
+    padding-left: 16px;
+}
+
+/* Publications */
+.pub-list {
+    margin: 6px 0 8px 18px;
+    padding: 0;
+}
+
+.pub-list li {
+    margin-bottom: 6px;
+    font-size: 0.92rem;
+}
+
+.pub-tag {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: rgba(56, 189, 248, 0.12);
+    color: #7dd3fc;
+}
+
+.pub-note {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* Contact 카드 */
+.contact-card .contact-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.contact-card h3 {
+    margin: 10px 0 4px;
+    font-size: 0.96rem;
+}
+
+.contact-card p {
+    margin: 0 0 6px;
+    font-size: 0.9rem;
+}
+
+/* 링크 스타일 */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* CV 버튼 */
+.cv-button {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: #0b1120;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cv-button:hover {
+    filter: brightness(1.05);
+    text-decoration: none;
+}
+
+.contact-tags {
+    font-size: 0.86rem;
+    color: #cbd5f5;
+}
+
+/* 푸터 */
+footer {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #1f2937;
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-align: right;
+}
+
+/* ----------------- 페이드 인 애니메이션 ----------------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 순차적으로 부드럽게 등장 */
+.content>section {
+    opacity: 0;
+    animation: fadeUp 0.7s ease-out forwards;
+}
+
+.content>section:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.content>section:nth-of-type(2) {
+    animation-delay: 0.25s;
+}
+
+.content>section:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+.content>section:nth-of-type(4) {
+    animation-delay: 0.55s;
+}
+
+/* ----------------- 반응형 (모바일) ----------------- */
+@media (max-width: 900px) {
+    .page {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        flex-direction: row;
+        height: auto;
+        padding: 16px;
+        border-radius: 0 0 24px 24px;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+    .links {
+        flex-direction: row;
+        margin-top: 0;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    .links a {
+        font-size: 0.85rem;
+        padding: 6px 8px;
+    }
+
+    .content {
+        border-radius: 0;
+        padding: 140px 18px 24px;
+    }
+
+    .content-offset {
+        padding-top: 150px;
+    }
+
+    .info-grid,
+    .research-grid,
+    .contact-card .contact-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* Research figure styling */
+.research-figure {
+    margin: 12px 0 10px;
+    text-align: center;
+}
+
+.research-figure img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    background: #fff;
+    padding: 6px;
+}
+
+.research-figure figcaption {
+    margin-top: 6px;
+    font-size: 0.78rem;
+    color: #9ca3af;
+    line-height: 1.4;
+}
